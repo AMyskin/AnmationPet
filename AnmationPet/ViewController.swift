@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     }
 
     private func setupUI() {
-        view.backgroundColor = .green
+        view.backgroundColor = .gray
         view.addSubview(myButton)
         myButton.backgroundColor = .green
         myButton.setTitle("Push", for: .normal)
@@ -69,10 +69,10 @@ class ViewController: UIViewController {
 
         view.addSubview(myView)
         myView.prepareForAutoLayout()
-        myView.pinToCenterSuperview(xOffset: 0, yOffset: -200)
-        myView.widthAnchor ~= 250
-        myView.heightAnchor ~= 250
-        myView.backgroundColor = .yellow
+        myView.pinToCenterSuperview(xOffset: 0, yOffset: 0)
+        myView.widthAnchor ~= 100
+        myView.heightAnchor ~= 100
+        myView.backgroundColor = .red
     }
 
     @objc func pushButton() {
@@ -98,10 +98,10 @@ class ViewController: UIViewController {
 
         finalPath = second
 
-        CATransaction.begin()
-        CATransaction.setCompletionBlock {
-            completed?()
-        }
+//        CATransaction.begin()
+//        CATransaction.setCompletionBlock {
+//            completed?()
+//        }
 
         let animation = CABasicAnimation(keyPath: "path")
         animation.duration = duration
@@ -112,14 +112,14 @@ class ViewController: UIViewController {
         animation.isRemovedOnCompletion = false
         shapeLayer.add(animation, forKey: "animateCard")
 //        maskLayer.add(animation, forKey: "animateCard")
-        CATransaction.commit()
+//        CATransaction.commit()
     }
 
     func reverseAnimation(duration: CFTimeInterval = 1, completed: (() -> Void)?) {
-        CATransaction.begin()
-        CATransaction.setCompletionBlock {
-            completed?()
-        }
+//        CATransaction.begin()
+//        CATransaction.setCompletionBlock {
+//            completed?()
+//        }
         let reverseAnimation = CABasicAnimation(keyPath: "path")
         reverseAnimation.duration = duration
         reverseAnimation.fromValue = finalPath.cgPath
@@ -131,7 +131,7 @@ class ViewController: UIViewController {
 //        maskLayer.removeAnimation(forKey: "animateCard")
         shapeLayer.add(reverseAnimation, forKey: "animateCard")
 //        maskLayer.add(reverseAnimation, forKey: "animateCard")
-        CATransaction.commit()
+//        CATransaction.commit()
     }
 }
 
