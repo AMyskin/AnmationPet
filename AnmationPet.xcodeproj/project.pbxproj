@@ -10,9 +10,23 @@
 		1B90FDAF29195C1D004EFBF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDAE29195C1D004EFBF3 /* AppDelegate.swift */; };
 		1B90FDB129195C1D004EFBF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDB029195C1D004EFBF3 /* SceneDelegate.swift */; };
 		1B90FDB329195C1D004EFBF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDB229195C1D004EFBF3 /* ViewController.swift */; };
-		1B90FDB629195C1D004EFBF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B90FDB429195C1D004EFBF3 /* Main.storyboard */; };
 		1B90FDB829195C1E004EFBF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B90FDB729195C1E004EFBF3 /* Assets.xcassets */; };
 		1B90FDBB29195C1E004EFBF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B90FDB929195C1E004EFBF3 /* LaunchScreen.storyboard */; };
+		1B90FDD729196114004EFBF3 /* VocalizeCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDC529196114004EFBF3 /* VocalizeCurrency.swift */; };
+		1B90FDD829196114004EFBF3 /* AccessibilityCarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDC729196114004EFBF3 /* AccessibilityCarouselItem.swift */; };
+		1B90FDD929196114004EFBF3 /* AccessibilityCarouselElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDC829196114004EFBF3 /* AccessibilityCarouselElement.swift */; };
+		1B90FDDA29196114004EFBF3 /* AccessibilityCarouselContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDC929196114004EFBF3 /* AccessibilityCarouselContainer.swift */; };
+		1B90FDDB29196114004EFBF3 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDCA29196114004EFBF3 /* Localized.swift */; };
+		1B90FDDC29196114004EFBF3 /* FontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDCB29196114004EFBF3 /* FontFamily.swift */; };
+		1B90FDDD29196114004EFBF3 /* MagicLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDCC29196114004EFBF3 /* MagicLayout.swift */; };
+		1B90FDDE29196114004EFBF3 /* SwiftStandardLibraryDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDCE29196114004EFBF3 /* SwiftStandardLibraryDiff.swift */; };
+		1B90FDDF29196114004EFBF3 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDCF29196114004EFBF3 /* Queue.swift */; };
+		1B90FDE029196114004EFBF3 /* ScreenSizeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDD029196114004EFBF3 /* ScreenSizeClass.swift */; };
+		1B90FDE129196114004EFBF3 /* TransliterationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDD129196114004EFBF3 /* TransliterationHelper.swift */; };
+		1B90FDE229196114004EFBF3 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDD329196114004EFBF3 /* ContainerView.swift */; };
+		1B90FDE329196114004EFBF3 /* GradientLayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDD429196114004EFBF3 /* GradientLayerHelper.swift */; };
+		1B90FDE429196114004EFBF3 /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDD529196114004EFBF3 /* KeyboardHelper.swift */; };
+		1B90FDE529196114004EFBF3 /* ColorName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDD629196114004EFBF3 /* ColorName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +34,24 @@
 		1B90FDAE29195C1D004EFBF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B90FDB029195C1D004EFBF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1B90FDB229195C1D004EFBF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1B90FDB529195C1D004EFBF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B90FDB729195C1E004EFBF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B90FDBA29195C1E004EFBF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B90FDBC29195C1E004EFBF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B90FDC529196114004EFBF3 /* VocalizeCurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocalizeCurrency.swift; sourceTree = "<group>"; };
+		1B90FDC729196114004EFBF3 /* AccessibilityCarouselItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityCarouselItem.swift; sourceTree = "<group>"; };
+		1B90FDC829196114004EFBF3 /* AccessibilityCarouselElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityCarouselElement.swift; sourceTree = "<group>"; };
+		1B90FDC929196114004EFBF3 /* AccessibilityCarouselContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityCarouselContainer.swift; sourceTree = "<group>"; };
+		1B90FDCA29196114004EFBF3 /* Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
+		1B90FDCB29196114004EFBF3 /* FontFamily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontFamily.swift; sourceTree = "<group>"; };
+		1B90FDCC29196114004EFBF3 /* MagicLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicLayout.swift; sourceTree = "<group>"; };
+		1B90FDCE29196114004EFBF3 /* SwiftStandardLibraryDiff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftStandardLibraryDiff.swift; sourceTree = "<group>"; };
+		1B90FDCF29196114004EFBF3 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		1B90FDD029196114004EFBF3 /* ScreenSizeClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSizeClass.swift; sourceTree = "<group>"; };
+		1B90FDD129196114004EFBF3 /* TransliterationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransliterationHelper.swift; sourceTree = "<group>"; };
+		1B90FDD329196114004EFBF3 /* ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		1B90FDD429196114004EFBF3 /* GradientLayerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientLayerHelper.swift; sourceTree = "<group>"; };
+		1B90FDD529196114004EFBF3 /* KeyboardHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHelper.swift; sourceTree = "<group>"; };
+		1B90FDD629196114004EFBF3 /* ColorName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +84,77 @@
 		1B90FDAD29195C1D004EFBF3 /* AnmationPet */ = {
 			isa = PBXGroup;
 			children = (
+				1B90FDC229196114004EFBF3 /* Helpers */,
 				1B90FDAE29195C1D004EFBF3 /* AppDelegate.swift */,
 				1B90FDB029195C1D004EFBF3 /* SceneDelegate.swift */,
 				1B90FDB229195C1D004EFBF3 /* ViewController.swift */,
-				1B90FDB429195C1D004EFBF3 /* Main.storyboard */,
 				1B90FDB729195C1E004EFBF3 /* Assets.xcassets */,
 				1B90FDB929195C1E004EFBF3 /* LaunchScreen.storyboard */,
 				1B90FDBC29195C1E004EFBF3 /* Info.plist */,
 			);
 			path = AnmationPet;
+			sourceTree = "<group>";
+		};
+		1B90FDC229196114004EFBF3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1B90FDC329196114004EFBF3 /* UIAccessibility */,
+				1B90FDCA29196114004EFBF3 /* Localized.swift */,
+				1B90FDCB29196114004EFBF3 /* FontFamily.swift */,
+				1B90FDCC29196114004EFBF3 /* MagicLayout.swift */,
+				1B90FDCD29196114004EFBF3 /* DiffableArray */,
+				1B90FDD029196114004EFBF3 /* ScreenSizeClass.swift */,
+				1B90FDD129196114004EFBF3 /* TransliterationHelper.swift */,
+				1B90FDD229196114004EFBF3 /* View */,
+				1B90FDD429196114004EFBF3 /* GradientLayerHelper.swift */,
+				1B90FDD529196114004EFBF3 /* KeyboardHelper.swift */,
+				1B90FDD629196114004EFBF3 /* ColorName.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1B90FDC329196114004EFBF3 /* UIAccessibility */ = {
+			isa = PBXGroup;
+			children = (
+				1B90FDC429196114004EFBF3 /* VocalizeCurrency */,
+				1B90FDC629196114004EFBF3 /* AccessibilityCarousel */,
+			);
+			path = UIAccessibility;
+			sourceTree = "<group>";
+		};
+		1B90FDC429196114004EFBF3 /* VocalizeCurrency */ = {
+			isa = PBXGroup;
+			children = (
+				1B90FDC529196114004EFBF3 /* VocalizeCurrency.swift */,
+			);
+			path = VocalizeCurrency;
+			sourceTree = "<group>";
+		};
+		1B90FDC629196114004EFBF3 /* AccessibilityCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				1B90FDC729196114004EFBF3 /* AccessibilityCarouselItem.swift */,
+				1B90FDC829196114004EFBF3 /* AccessibilityCarouselElement.swift */,
+				1B90FDC929196114004EFBF3 /* AccessibilityCarouselContainer.swift */,
+			);
+			path = AccessibilityCarousel;
+			sourceTree = "<group>";
+		};
+		1B90FDCD29196114004EFBF3 /* DiffableArray */ = {
+			isa = PBXGroup;
+			children = (
+				1B90FDCE29196114004EFBF3 /* SwiftStandardLibraryDiff.swift */,
+				1B90FDCF29196114004EFBF3 /* Queue.swift */,
+			);
+			path = DiffableArray;
+			sourceTree = "<group>";
+		};
+		1B90FDD229196114004EFBF3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B90FDD329196114004EFBF3 /* ContainerView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +217,6 @@
 			files = (
 				1B90FDBB29195C1E004EFBF3 /* LaunchScreen.storyboard in Resources */,
 				1B90FDB829195C1E004EFBF3 /* Assets.xcassets in Resources */,
-				1B90FDB629195C1D004EFBF3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,22 +228,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B90FDB329195C1D004EFBF3 /* ViewController.swift in Sources */,
+				1B90FDDB29196114004EFBF3 /* Localized.swift in Sources */,
+				1B90FDE029196114004EFBF3 /* ScreenSizeClass.swift in Sources */,
+				1B90FDD829196114004EFBF3 /* AccessibilityCarouselItem.swift in Sources */,
+				1B90FDDD29196114004EFBF3 /* MagicLayout.swift in Sources */,
+				1B90FDE229196114004EFBF3 /* ContainerView.swift in Sources */,
+				1B90FDE429196114004EFBF3 /* KeyboardHelper.swift in Sources */,
+				1B90FDD729196114004EFBF3 /* VocalizeCurrency.swift in Sources */,
 				1B90FDAF29195C1D004EFBF3 /* AppDelegate.swift in Sources */,
 				1B90FDB129195C1D004EFBF3 /* SceneDelegate.swift in Sources */,
+				1B90FDDF29196114004EFBF3 /* Queue.swift in Sources */,
+				1B90FDDC29196114004EFBF3 /* FontFamily.swift in Sources */,
+				1B90FDE529196114004EFBF3 /* ColorName.swift in Sources */,
+				1B90FDDA29196114004EFBF3 /* AccessibilityCarouselContainer.swift in Sources */,
+				1B90FDE129196114004EFBF3 /* TransliterationHelper.swift in Sources */,
+				1B90FDDE29196114004EFBF3 /* SwiftStandardLibraryDiff.swift in Sources */,
+				1B90FDD929196114004EFBF3 /* AccessibilityCarouselElement.swift in Sources */,
+				1B90FDE329196114004EFBF3 /* GradientLayerHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1B90FDB429195C1D004EFBF3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1B90FDB529195C1D004EFBF3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1B90FDB929195C1E004EFBF3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -293,7 +389,6 @@
 				INFOPLIST_FILE = AnmationPet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +415,6 @@
 				INFOPLIST_FILE = AnmationPet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
