@@ -107,10 +107,11 @@ class ViewController: UIViewController {
         animation.duration = duration
         animation.fromValue = initialPath.cgPath
         animation.toValue = finalPath.cgPath
-        animation.timingFunction = CAMediaTimingFunction(name: .default)
+        animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
         animation.fillMode = .forwards
-        animation.isRemovedOnCompletion = false
+//        animation.isRemovedOnCompletion = false
         shapeLayer.add(animation, forKey: "animateCard")
+        shapeLayer.path = finalPath.cgPath
 //        maskLayer.add(animation, forKey: "animateCard")
 //        CATransaction.commit()
     }
@@ -125,13 +126,14 @@ class ViewController: UIViewController {
         reverseAnimation.fromValue = finalPath.cgPath
         reverseAnimation.toValue = initialPath.cgPath
         reverseAnimation.timingFunction = CAMediaTimingFunction(name: .default)
-        reverseAnimation.isRemovedOnCompletion = false
+//        reverseAnimation.isRemovedOnCompletion = false
         reverseAnimation.fillMode = .backwards
         shapeLayer.removeAnimation(forKey: "animateCard")
 //        maskLayer.removeAnimation(forKey: "animateCard")
         shapeLayer.add(reverseAnimation, forKey: "animateCard")
 //        maskLayer.add(reverseAnimation, forKey: "animateCard")
 //        CATransaction.commit()
+        shapeLayer.path = initialPath.cgPath
     }
 }
 
