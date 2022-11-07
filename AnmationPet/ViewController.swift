@@ -9,13 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    /// The colored card shape.
     private let shapeLayer = CAShapeLayer()
-    /// The alpha mask, needed so that the animation does not clip.
     private let maskLayer = CAShapeLayer()
-    /// The initial path at the animation's beginning
-
-    /// The final path at the animation's end.
 
     private var initialPath = UIBezierPath()
     private var finalPath = UIBezierPath()
@@ -52,11 +47,14 @@ class ViewController: UIViewController {
 
         myView.layer.addSublayer(shapeLayer)
 
-        maskLayer.path = shapeLayer.path
-        maskLayer.position =  shapeLayer.position
+//        maskLayer.path = shapeLayer.path
+//        maskLayer.position =  shapeLayer.position
 
-        shapeLayer.fillColor = UIColor.red.cgColor
-        myView.layer.mask = maskLayer
+//        shapeLayer.fillColor = UIColor.red.cgColor
+
+//        myView.layer.mask = maskLayer
+
+        myView.layer.mask = shapeLayer
     }
 
     private func setupUI() {
@@ -113,7 +111,7 @@ class ViewController: UIViewController {
         animation.fillMode = .forwards
         animation.isRemovedOnCompletion = false
         shapeLayer.add(animation, forKey: "animateCard")
-        maskLayer.add(animation, forKey: "animateCard")
+//        maskLayer.add(animation, forKey: "animateCard")
         CATransaction.commit()
     }
 
@@ -130,9 +128,9 @@ class ViewController: UIViewController {
         reverseAnimation.isRemovedOnCompletion = false
         reverseAnimation.fillMode = .backwards
         shapeLayer.removeAnimation(forKey: "animateCard")
-        maskLayer.removeAnimation(forKey: "animateCard")
+//        maskLayer.removeAnimation(forKey: "animateCard")
         shapeLayer.add(reverseAnimation, forKey: "animateCard")
-        maskLayer.add(reverseAnimation, forKey: "animateCard")
+//        maskLayer.add(reverseAnimation, forKey: "animateCard")
         CATransaction.commit()
     }
 }
