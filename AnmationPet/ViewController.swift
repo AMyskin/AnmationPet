@@ -21,6 +21,8 @@ class ViewController: UIViewController {
 
     private let myButton = UIButton()
     private let myButton2 = UIButton()
+    private let routeButton = UIButton()
+
     private let mySlider = UISlider()
     private let myView = UIView()
     private let myView2 = UIView()
@@ -35,6 +37,9 @@ class ViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         setupUI()
         setupLayers()
+
+//        shapeLayer.drawsAsynchronously = true
+//        shapeLayer2.drawsAsynchronously = true
     }
 
     private func setupLayers() {
@@ -69,9 +74,9 @@ class ViewController: UIViewController {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.alignment = .center
-        stack.spacing = 100
+        stack.spacing = 90
         view.addSubview(stack.prepareForAutoLayout())
-        stack.pinEdgesToSuperviewEdges(top: 150, left: 0, bottom: 50, right: 0)
+        stack.pinEdgesToSuperviewEdges(top: 100, left: 0, bottom: 50, right: 0)
 
         stack.addArrangedSubview(myView)
 
@@ -89,16 +94,25 @@ class ViewController: UIViewController {
         myButton.setTitle("Animation1", for: .normal)
         myButton.setTitleColor(.black, for: .normal)
         myButton.widthAnchor ~= 120
+        myButton.heightAnchor ~= 30
         myButton.addTarget(self, action: #selector(pushButton), for: .touchUpInside)
 
-        stack.setCustomSpacing(50, after: myButton)
+        stack.setCustomSpacing(16, after: myButton)
 
         stack.addArrangedSubview(myButton2)
         myButton2.backgroundColor = .green
         myButton2.setTitle("Animation2", for: .normal)
         myButton2.setTitleColor(.black, for: .normal)
         myButton2.widthAnchor ~= 120
+        myButton2.heightAnchor ~= 30
         myButton2.addTarget(self, action: #selector(pushButton2), for: .touchUpInside)
+
+        stack.addArrangedSubview(routeButton)
+        routeButton.backgroundColor = .green
+        routeButton.setTitle("routeToVC", for: .normal)
+        routeButton.setTitleColor(.black, for: .normal)
+        routeButton.widthAnchor ~= 120
+        routeButton.addTarget(self, action: #selector(routeToVC), for: .touchUpInside)
 
         stack.addArrangedSubview(mySlider.prepareForAutoLayout())
         mySlider.widthAnchor ~= 250
@@ -113,6 +127,11 @@ class ViewController: UIViewController {
     @objc func sliderValueDidChange(_ sender:UISlider!)
     {
         self.shapeLayer.timeOffset = Double(sender.value) / 100
+    }
+
+    @objc func routeToVC() {
+        let vc = SecondViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     @objc func pushButton() {
