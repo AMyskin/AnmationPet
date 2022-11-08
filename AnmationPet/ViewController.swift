@@ -21,6 +21,7 @@ class ViewController: UIViewController {
 
     private let myButton = UIButton()
     private let myButton2 = UIButton()
+    private let mySlider = UISlider()
     private let myView = UIView()
     private let myView2 = UIView()
 
@@ -68,9 +69,9 @@ class ViewController: UIViewController {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.alignment = .center
-        stack.spacing = 130
+        stack.spacing = 100
         view.addSubview(stack.prepareForAutoLayout())
-        stack.pinEdgesToSuperviewEdges(top: 150, left: 0, bottom: 150, right: 0)
+        stack.pinEdgesToSuperviewEdges(top: 150, left: 0, bottom: 50, right: 0)
 
         stack.addArrangedSubview(myView)
 
@@ -90,7 +91,7 @@ class ViewController: UIViewController {
         myButton.widthAnchor ~= 120
         myButton.addTarget(self, action: #selector(pushButton), for: .touchUpInside)
 
-        stack.setCustomSpacing(16, after: myButton)
+        stack.setCustomSpacing(50, after: myButton)
 
         stack.addArrangedSubview(myButton2)
         myButton2.backgroundColor = .green
@@ -99,12 +100,24 @@ class ViewController: UIViewController {
         myButton2.widthAnchor ~= 120
         myButton2.addTarget(self, action: #selector(pushButton2), for: .touchUpInside)
 
+        stack.addArrangedSubview(mySlider.prepareForAutoLayout())
+        mySlider.widthAnchor ~= 250
+        mySlider.minimumValue = 0
+        mySlider.maximumValue = 100
 
+        mySlider.addTarget(self, action: #selector(sliderValueDidChange), for: .valueChanged)
+
+
+    }
+
+    @objc func sliderValueDidChange(_ sender:UISlider!)
+    {
+        self.shapeLayer.timeOffset = Double(sender.value) / 100
     }
 
     @objc func pushButton() {
         toogle.toggle()
-        let duration: CFTimeInterval = 0.5
+        let duration: CFTimeInterval = 1
         switch toogle {
         case true:
             let second = UIBezierPath()
@@ -122,7 +135,8 @@ class ViewController: UIViewController {
                 duration: duration,
                 initialPath: initialPath,
                 finalPath: finalPath,
-                shapeLayer: shapeLayer
+                shapeLayer: shapeLayer,
+                speed: 0
             )
         case false:
             reverseAnimation2(
@@ -170,7 +184,8 @@ class ViewController: UIViewController {
         duration: CFTimeInterval = 1,
         initialPath: UIBezierPath,
         finalPath: UIBezierPath,
-        shapeLayer: CAShapeLayer
+        shapeLayer: CAShapeLayer,
+        speed: Float = 1
     ) {
         shapeLayer.removeAllAnimations()
         let animation = CABasicAnimation(keyPath: "path")
@@ -182,6 +197,7 @@ class ViewController: UIViewController {
         animation.isRemovedOnCompletion = false
         shapeLayer.add(animation, forKey: "animateCard")
 //        shapeLayer2.path = finalPath2.cgPath
+        shapeLayer.speed = speed
 
     }
 
