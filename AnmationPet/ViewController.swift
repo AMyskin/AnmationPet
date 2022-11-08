@@ -67,36 +67,39 @@ class ViewController: UIViewController {
 
         let stack = UIStackView()
         stack.axis = .vertical
-        stack.spacing = 16
-        view.addSubview(stack)
-        stack.prepareForAutoLayout()
-        stack.pinToCenterSuperview(xOffset: 0, yOffset: 250)
+        stack.alignment = .center
+        stack.spacing = 130
+        view.addSubview(stack.prepareForAutoLayout())
+        stack.pinEdgesToSuperviewEdges(top: 150, left: 0, bottom: 150, right: 0)
+
+        stack.addArrangedSubview(myView)
+
+        myView.widthAnchor ~= 100
+        myView.heightAnchor ~= 100
+        myView.backgroundColor = .red
+
+        stack.addArrangedSubview(myView2)
+        myView2.widthAnchor ~= 100
+        myView2.heightAnchor ~= 100
+        myView2.backgroundColor = .magenta
 
         stack.addArrangedSubview(myButton)
         myButton.backgroundColor = .green
         myButton.setTitle("Animation1", for: .normal)
         myButton.setTitleColor(.black, for: .normal)
+        myButton.widthAnchor ~= 120
         myButton.addTarget(self, action: #selector(pushButton), for: .touchUpInside)
+
+        stack.setCustomSpacing(16, after: myButton)
 
         stack.addArrangedSubview(myButton2)
         myButton2.backgroundColor = .green
         myButton2.setTitle("Animation2", for: .normal)
         myButton2.setTitleColor(.black, for: .normal)
+        myButton2.widthAnchor ~= 120
         myButton2.addTarget(self, action: #selector(pushButton2), for: .touchUpInside)
 
-        view.addSubview(myView)
-        myView.prepareForAutoLayout()
-        myView.pinToCenterSuperview(xOffset: 0, yOffset: 0)
-        myView.widthAnchor ~= 100
-        myView.heightAnchor ~= 100
-        myView.backgroundColor = .red
 
-        view.addSubview(myView2)
-        myView2.prepareForAutoLayout()
-        myView2.pinToCenterSuperview(xOffset: 0, yOffset: -200)
-        myView2.widthAnchor ~= 100
-        myView2.heightAnchor ~= 100
-        myView2.backgroundColor = .magenta
     }
 
     @objc func pushButton() {
