@@ -7,6 +7,14 @@
 
 import UIKit
 
+class Person {
+    var apart: Apart?
+}
+
+class Apart {
+    var person: Person?
+}
+
 class ViewController: UIViewController {
 
     private let shapeLayer = CAShapeLayer()
@@ -27,16 +35,33 @@ class ViewController: UIViewController {
     private let myView = UIView()
     private let myView2 = UIView()
 
+    private let myLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Test"
+        return label
+    }()
+
     private var toogle: Bool = false
     private var toogle2: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+        setupLayers()
+
+//        let person = Person()
+//        let apart = Apart()
+//        let apart2 = Apart()
+//        let apart3 = Apart()
+//        person.apart = apart
+//        apart.person = person
+//        apart2.person = person
+//        apart3.person = person
     }
 
     override func viewDidLayoutSubviews() {
-        setupUI()
-        setupLayers()
+
+
 
 //        shapeLayer.drawsAsynchronously = true
 //        shapeLayer2.drawsAsynchronously = true
@@ -64,12 +89,29 @@ class ViewController: UIViewController {
         initialPath2.addLine(to: CGPoint(x: 0, y: 0))
 
         shapeLayer2.path = initialPath2.cgPath
+        shapeLayer2.backgroundColor = UIColor.magenta.cgColor
         myView2.layer.addSublayer(shapeLayer2)
         myView2.layer.mask = shapeLayer2
+
+        let shadowLayer = CAShapeLayer()
+        shadowLayer.path = initialPath2.cgPath
+        shadowLayer.frame = shapeLayer2.frame
+
+        shadowLayer.shadowOpacity = 0.4
+        shadowLayer.shadowRadius = 3
+        shadowLayer.shadowColor = UIColor.black.cgColor
+        shadowLayer.shadowOffset = CGSize(width: 1, height: 3)
+
+        shapeLayer2.insertSublayer(shadowLayer, below: shapeLayer2)
     }
 
     private func setupUI() {
         view.backgroundColor = .gray
+
+        view.addSubview(myLabel.prepareForAutoLayout())
+        myLabel.leftAnchor ~= view.leftAnchor + 16
+        myLabel.topAnchor ~= view.topAnchor + 50
+        myLabel.rightAnchor ~= view.rightAnchor
 
         let stack = UIStackView()
         stack.axis = .vertical
@@ -127,6 +169,9 @@ class ViewController: UIViewController {
     @objc func sliderValueDidChange(_ sender:UISlider!)
     {
         self.shapeLayer.timeOffset = Double(sender.value) / 100
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.myLabel.text = "\(Double(sender.value) / 100)"
+//        }
     }
 
     @objc func routeToVC() {
@@ -238,4 +283,3 @@ class ViewController: UIViewController {
         shapeLayer.path = initialPath.cgPath
     }
 }
-
