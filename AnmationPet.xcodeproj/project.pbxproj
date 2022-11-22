@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B2E9A802924F6BF00FF31EA /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E9A7F2924F6BF00FF31EA /* BottomSheetViewController.swift */; };
 		1B90FDAF29195C1D004EFBF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDAE29195C1D004EFBF3 /* AppDelegate.swift */; };
 		1B90FDB129195C1D004EFBF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDB029195C1D004EFBF3 /* SceneDelegate.swift */; };
 		1B90FDB329195C1D004EFBF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDB229195C1D004EFBF3 /* ViewController.swift */; };
@@ -34,9 +35,14 @@
 		1B90FDF1291A8667004EFBF3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90FDF0291A8667004EFBF3 /* SecondViewController.swift */; };
 		1BD18125291EA50400E29EC8 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1BD18124291EA50400E29EC8 /* Lottie */; };
 		1BD18127291EE4A800E29EC8 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BD18126291EE4A800E29EC8 /* test.json */; };
+		1BD74BD1292CB83B00ECFE85 /* ModAnim1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD74BD0292CB83B00ECFE85 /* ModAnim1VC.swift */; };
+		1BD74BD3292CB87800ECFE85 /* ModAnim2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD74BD2292CB87800ECFE85 /* ModAnim2VC.swift */; };
+		1BDFFDA229264CC3006D25BF /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFFDA129264CC3006D25BF /* CustomView.swift */; };
+		1BDFFDA429265325006D25BF /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFFDA329265325006D25BF /* TabBarVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B2E9A7F2924F6BF00FF31EA /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		1B90FDAB29195C1D004EFBF3 /* AnmationPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnmationPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B90FDAE29195C1D004EFBF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B90FDB029195C1D004EFBF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +71,10 @@
 		1B90FDEB291A8633004EFBF3 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		1B90FDF0291A8667004EFBF3 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		1BD18126291EE4A800E29EC8 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		1BD74BD0292CB83B00ECFE85 /* ModAnim1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModAnim1VC.swift; sourceTree = "<group>"; };
+		1BD74BD2292CB87800ECFE85 /* ModAnim2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModAnim2VC.swift; sourceTree = "<group>"; };
+		1BDFFDA129264CC3006D25BF /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		1BDFFDA329265325006D25BF /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +114,11 @@
 				1B90FDB029195C1D004EFBF3 /* SceneDelegate.swift */,
 				1B90FDB229195C1D004EFBF3 /* ViewController.swift */,
 				1B90FDF0291A8667004EFBF3 /* SecondViewController.swift */,
+				1BD74BD0292CB83B00ECFE85 /* ModAnim1VC.swift */,
+				1BD74BD2292CB87800ECFE85 /* ModAnim2VC.swift */,
+				1BDFFDA329265325006D25BF /* TabBarVC.swift */,
+				1B2E9A7F2924F6BF00FF31EA /* BottomSheetViewController.swift */,
+				1BDFFDA129264CC3006D25BF /* CustomView.swift */,
 				1B90FDB729195C1E004EFBF3 /* Assets.xcassets */,
 				1B90FDB929195C1E004EFBF3 /* LaunchScreen.storyboard */,
 				1B90FDBC29195C1E004EFBF3 /* Info.plist */,
@@ -265,10 +280,14 @@
 				1B90FDEF291A8633004EFBF3 /* CustomNavigationController.swift in Sources */,
 				1B90FDB329195C1D004EFBF3 /* ViewController.swift in Sources */,
 				1B90FDDB29196114004EFBF3 /* Localized.swift in Sources */,
+				1BD74BD3292CB87800ECFE85 /* ModAnim2VC.swift in Sources */,
 				1B90FDE029196114004EFBF3 /* ScreenSizeClass.swift in Sources */,
 				1B90FDEC291A8633004EFBF3 /* CustomInteractiveTransition.swift in Sources */,
+				1BD74BD1292CB83B00ECFE85 /* ModAnim1VC.swift in Sources */,
 				1B90FDD829196114004EFBF3 /* AccessibilityCarouselItem.swift in Sources */,
 				1B90FDDD29196114004EFBF3 /* MagicLayout.swift in Sources */,
+				1B2E9A802924F6BF00FF31EA /* BottomSheetViewController.swift in Sources */,
+				1BDFFDA429265325006D25BF /* TabBarVC.swift in Sources */,
 				1B90FDE229196114004EFBF3 /* ContainerView.swift in Sources */,
 				1B90FDE429196114004EFBF3 /* KeyboardHelper.swift in Sources */,
 				1B90FDD729196114004EFBF3 /* VocalizeCurrency.swift in Sources */,
@@ -281,6 +300,7 @@
 				1B90FDE529196114004EFBF3 /* ColorName.swift in Sources */,
 				1B90FDEE291A8633004EFBF3 /* CustomPopAnimator.swift in Sources */,
 				1B90FDDA29196114004EFBF3 /* AccessibilityCarouselContainer.swift in Sources */,
+				1BDFFDA229264CC3006D25BF /* CustomView.swift in Sources */,
 				1B90FDE129196114004EFBF3 /* TransliterationHelper.swift in Sources */,
 				1B90FDDE29196114004EFBF3 /* SwiftStandardLibraryDiff.swift in Sources */,
 				1B90FDD929196114004EFBF3 /* AccessibilityCarouselElement.swift in Sources */,

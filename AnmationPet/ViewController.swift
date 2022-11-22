@@ -29,6 +29,7 @@ class ViewController: UIViewController {
 
     private let myButton = UIButton()
     private let myButton2 = UIButton()
+    private let routeAnimModal = UIButton()
     private let routeButton = UIButton()
 
     private let mySlider = UISlider()
@@ -110,15 +111,15 @@ class ViewController: UIViewController {
 
         view.addSubview(myLabel.prepareForAutoLayout())
         myLabel.leftAnchor ~= view.leftAnchor + 16
-        myLabel.topAnchor ~= view.topAnchor + 50
+        myLabel.topAnchor ~= view.safeAreaLayoutGuide.topAnchor
         myLabel.rightAnchor ~= view.rightAnchor
 
         let stack = UIStackView()
         stack.axis = .vertical
         stack.alignment = .center
-        stack.spacing = 90
+        stack.spacing = 50
         view.addSubview(stack.prepareForAutoLayout())
-        stack.pinEdgesToSuperviewEdges(top: 100, left: 0, bottom: 50, right: 0)
+        stack.pinEdgesToSuperviewEdges(top: 100, left: 0, bottom: 100, right: 0)
 
         stack.addArrangedSubview(myView)
 
@@ -149,6 +150,14 @@ class ViewController: UIViewController {
         myButton2.heightAnchor ~= 30
         myButton2.addTarget(self, action: #selector(pushButton2), for: .touchUpInside)
 
+        stack.addArrangedSubview(routeAnimModal)
+        routeAnimModal.backgroundColor = .green
+        routeAnimModal.setTitle("routeAnimModal", for: .normal)
+        routeAnimModal.setTitleColor(.black, for: .normal)
+        routeAnimModal.widthAnchor ~= 180
+        routeAnimModal.heightAnchor ~= 30
+        routeAnimModal.addTarget(self, action: #selector(routeModal), for: .touchUpInside)
+
         stack.addArrangedSubview(routeButton)
         routeButton.backgroundColor = .green
         routeButton.setTitle("routeToVC", for: .normal)
@@ -170,13 +179,19 @@ class ViewController: UIViewController {
     {
         self.shapeLayer.timeOffset = Double(sender.value) / 100
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.myLabel.text = "\(Double(sender.value) / 100)"
+            self.myLabel.text = String(format: "%.2f", sender.value)
 //        }
     }
 
     @objc func routeToVC() {
-        let vc = SecondViewController()
+        let vc = TabBarVC()
         navigationController?.pushViewController(vc, animated: true)
+    }
+
+    @objc func routeModal() {
+        let modalVC = ModAnim1VC()
+        modalVC.modalPresentationStyle = .overFullScreen
+        present(modalVC, animated: true)
     }
 
     @objc func pushButton() {

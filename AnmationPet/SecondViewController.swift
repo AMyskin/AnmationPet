@@ -15,13 +15,25 @@ class SecondViewController: UIViewController {
 //    private let animateView: LottieAnimationView = LottieAnimationView()
 
     private let button = UIButton()
+    private let button2 = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("SecondViewController viewWillAppear")
+    }
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        print("SecondViewController viewWillLayoutSubviews")
+    }
+
     private func setupUI() {
+        title = "Animation"
         view.backgroundColor = .white
 
         // Create Animation object
@@ -44,7 +56,7 @@ class SecondViewController: UIViewController {
 
 
         view.addSubview(button.prepareForAutoLayout())
-        button.bottomAnchor ~= view.bottomAnchor - 30
+        button.bottomAnchor ~= view.bottomAnchor - 150
         button.leftAnchor ~= view.leftAnchor + 16
 
         button.backgroundColor = .green
@@ -53,12 +65,40 @@ class SecondViewController: UIViewController {
         button.widthAnchor ~= 120
         button.heightAnchor ~= 30
         button.addTarget(self, action: #selector(pushButton), for: .touchUpInside)
+
+        view.addSubview(button2.prepareForAutoLayout())
+        button2.bottomAnchor ~= view.bottomAnchor - 150
+        button2.leftAnchor ~= view.rightAnchor - 150
+
+        button2.backgroundColor = .green
+        button2.setTitle("BottomSheet", for: .normal)
+        button2.setTitleColor(.black, for: .normal)
+        button2.widthAnchor ~= 120
+        button2.heightAnchor ~= 30
+        button2.addTarget(self, action: #selector(pushButton2), for: .touchUpInside)
     }
 
-    @objc
-    private func pushButton() {
+    @objc private func pushButton() {
         animationView?.isHidden = false
         animationView?.play()
+    }
+
+    @objc private func pushButton2() {
+        showMyViewControllerInACustomizedSheet()
+    }
+
+
+    func showMyViewControllerInACustomizedSheet() {
+        let viewControllerToPresent = BottomSheetViewController()
+        if let sheet = viewControllerToPresent.sheetPresentationController {
+
+            sheet.detents = [ .medium(), .large()]
+            sheet.largestUndimmedDetentIdentifier = .large
+            sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            sheet.prefersEdgeAttachedInCompactHeight = true
+            sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+        }
+        present(viewControllerToPresent, animated: true, completion: nil)
     }
 }
 
